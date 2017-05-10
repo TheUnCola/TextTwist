@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="author" content="us">
+	
+	<title>Waffle TextTwist</title>
+	<link rel="shortcut icon" href="pics/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="pics/favicon.ico" type="image/x-icon">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="tt.css" />
+	<script src="tt_functions.js"></script>
+</head>
+
+<body>
+	<div id="startContainer">
+		<div class="startPopup">
+			<img class="logo" src="pics/logo.png" />
+			<button id="startGame" class="button button3">Start Game</button>
+		</div>
+	</div>
+	
+	<div id="pauseContainer">
+		<div class="pausePopup">
+			<div><button id="xP" class="xB" /></button></div>
+			<button id="newGame" class="button button3">New Game</button>
+			<button id="saveGame" class="button button3">Save Game</button>
+			<button id="loadGame" class="button button3">Load Game</button>
+		</div>
+	</div>
+	<div id="saveContainer">
+		<div class="savePopup">
+			<div><button id="xS" class="xB" /></button></div>
+			<form id="save">
+				<input type="text" id="username" name="username" />
+				<button id="userSave" class="button button3">Save</button>
+			</form>
+		</div>
+	</div>
+	<div id="loadContainer">
+		<div class="loadPopup">
+			<div><button id="xL" class="xB" /></button></div>
+			<form id="load">
+				<input type="text" id="usernameL" name="username" />
+				<button id="userLoad" class="button button3">Load</button>
+			</form>
+		</div>
+	</div>
+	<div id="endContainer">
+		<div class="endPopup">
+			<h1>Game Over!</h1>
+			<button id="endNewGame" class="button button3">New Game</button>
+			<br /><br />
+			<h2>Score:</h2>
+			<span id="endScore">0</span>
+		</div>
+	</div>
+	
+	<div class="main">
+		<div class="allGame">
+			<div class="foundWords">
+				<table id="wordsFound"></table>
+			</div>
+			
+			<div class="game">
+				<div class="topBar">
+					<button id="pause" class="pause" /></button>
+				</div>
+				<img class="logo" src="pics/logo.png" />
+				<div id="ttWordSubmitDiv">
+					<form id="ttWordSubmit">
+						<input readonly type="text" id="L1"/>
+						<input readonly type="text" id="L2"/>
+						<input readonly type="text" id="L3"/>
+						<input readonly type="text" id="L4"/>
+						<input readonly type="text" id="L5"/>
+						<input readonly type="text" id="L6"/>
+					</form>
+				</div>
+				
+				<div id="rackButtons">
+					<button id="C0" class="button button5" />W</button>    
+					<button id="C1" class="button button5" />A</button> 
+					<button id="C2" class="button button5" />F</button> 
+					<button id="C3" class="button button5" />F</button>
+					<button id="C4" class="button button5" />L</button>
+					<button id="C5" class="button button5" />E</button>
+				</div>
+				
+				<p class="rack"></p>
+				
+				<div class="buttons">
+					<button class="button button5" id="submitWord">Enter</button>
+					<button class="button button5" id="twist">Twist</button>
+					<button class="button button5" id="lastWord">Last Word</button>
+					<button class="button button5" id="clear">Clear</button>
+				</div>
+				
+				<div class="bottomDisplay">
+					<h2>Time:</h2>
+					<span id="time">0:00</span>
+					<h2>Score:</h2>
+					<span id="score">0</span>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<script src="tt_jquery.js"></script>
+</body>
+</html>
